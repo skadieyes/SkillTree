@@ -34,16 +34,29 @@
 
 > 6.返回一个React Element，将会作为ReactDOMServer.renderToStream()这个方法的参数传入。这也是我们服务端的打包入口文件，因为其中包含了大量的es6以及JSX语法，所以我们必须得经过webpack + babel处理后，才能在Node侧调用该方法
 
-#### 客户端DOM激活
-> 1.判断是使用ssr还是csr的渲染模式, 使用window.__USESSR__属性来判断，使用了SSR的应用会在服务端吐出来的html中注入这个属性. ssr会使用ReactDOM.hydrate的方法进行渲染, csr会使用ReactDOM.render
-
-> 2.使用BrowserRouter包裹组件，是为了使用路由能够在前端进行跳转
-
-> 3.获取组件的layout, 没有就是用默认的layout
-
-> 4.使用react-router渲染我们的组件
-
-> 5.使用高阶组件getWrappedComponent把组件包装一下（为了保证SSR／CSR应用每次进行前端路由切换时都会调用getInitialProps方法，并将获取的数据作为props注入到要渲染的组件。）
+### 客户端DOM激活
+> 1. 判断是使用ssr还是csr的渲染模式, 使用window.__USESSR__属性来判断，使用了SSR的应用会在服务端吐出来的html中注入这个属性. ssr会使用ReactDOM.hydrate的方法进行渲染, csr会使用ReactDOM.render
+> 2. 使用BrowserRouter包裹组件，是为了使用路由能够在前端进行跳转
+> 3. 获取组件的layout, 没有就是用默认的layout
+> 4. 使用react-router渲染我们的组件
+> 5. 使用高阶组件getWrappedComponent把组件包装一下（为了保证SSR／CSR应用每次进行前端路由切换时都会调用getInitialProps方法，并将获取的数据作为props注入到要渲染的组件。）
 
 #### hydrate API
 > dom检测: hydrate API是React16的新API, hydrate会在客户端生成一遍vdom, 并比较服务端生成的vdom和客户端生成的vdom是否一致, 如果不一致会显示error.
+
+### 以流的形式返回
+> 打包后的severRender, 把它渲染为流, 和我们的模版文件结合成一个完整的流返回给客户端。
+
+> 流的优势: 相比一次性写到内存中, 它会写到一个缓冲区中, 然后由消费者去读取，不用将整个文件写进内存，节省了内存空间。
+
+#### 组合过程
+> 1. 判断当前渲染模式是ssr 还是 csr
+> 2. 读取模版文件的内容
+> 3. 全局注册renderToNodeStream, 并保证客户端和服务端用的是相同的包
+> 4. 调用serverRender方法，获取到staticRouter包裹的需要渲染的组件
+> 5. 调用全局的renderToNodeStream把组件渲染成流
+> 6. 调用config里的injectCss, 插入静态css文件资源，调用stringToStream模块来将字符串转换为stream
+> 7. 通过window.__INITIAL_DATA__将服务端获取的数据注入到页面中，作为客户端hydrate的初始数据
+> 8. 调用config里的injectSrcipt, 载入静态js，再转成stream
+> 9. 通过multiStream把所有stream合成一份返回给浏览器
+
