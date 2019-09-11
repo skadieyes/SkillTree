@@ -7,6 +7,7 @@
     - 1.2 [SSR、CSR、同构方案浅析](https://github.com/skadieyes/SkillTree/blob/master/%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA/SSR%E3%80%81CSR%E3%80%81%E5%90%8C%E6%9E%84%E6%96%B9%E6%A1%88%E6%B5%85%E6%9E%90.md)
 2. [前端编码](https://github.com/skadieyes/SkillTree/tree/master/%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A0%81)
      - 2.1 [去重](https://github.com/skadieyes/SkillTree/blob/master/%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A0%81/1.%E5%8E%BB%E9%87%8D.md)
+     - 2.2 [数组扁平化](https://github.com/skadieyes/SkillTree/blob/master/%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A0%81/2.%E6%95%B0%E7%BB%84%E6%89%81%E5%B9%B3%E5%8C%96.md)
 3. [服务端通信](https://github.com/skadieyes/SkillTree/tree/master/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%80%9A%E4%BF%A1)
     - 3.1 [跨页面通信的方式](https://github.com/skadieyes/SkillTree/blob/master/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%80%9A%E4%BF%A1/1.%E8%B7%A8%E9%A1%B5%E9%9D%A2%E9%80%9A%E4%BF%A1%E7%9A%84%E6%96%B9%E5%BC%8F.md)
     - 3.2 [各类“服务器推”技术原理和实例](https://github.com/skadieyes/SkillTree/blob/master/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%80%9A%E4%BF%A1/2.%E5%90%84%E7%B1%BB%E2%80%9C%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8E%A8%E2%80%9D%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E4%BE%8B.md)
