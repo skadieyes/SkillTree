@@ -13,6 +13,7 @@
      - 2.5 [使用reduce实现map和filter](https://github.com/skadieyes/SkillTree/blob/master/%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A0%81/5.%E4%BD%BF%E7%94%A8reduce%E5%AE%9E%E7%8E%B0map%E5%92%8Cfilter.md)
      - 2.6 [防抖和节流](https://github.com/skadieyes/SkillTree/blob/master/%E7%BC%96%E7%A0%81/6.%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81.md)
      - 2.7 [Set和WeakSet&Map和WeakMap](https://github.com/skadieyes/SkillTree/blob/master/%E7%BC%96%E7%A0%81/7.Set%E5%92%8CWeakSet%26Map%E5%92%8CWeakMap.md)
+     - 2.8 [深度优先遍历和广度优先遍历](https://github.com/skadieyes/SkillTree/blob/master/%E7%BC%96%E7%A0%81/8.%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%E5%92%8C%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86.md)
 3. [服务端通信](https://github.com/skadieyes/SkillTree/tree/master/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%80%9A%E4%BF%A1)
     - 3.1 [跨页面通信的方式](https://github.com/skadieyes/SkillTree/blob/master/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%80%9A%E4%BF%A1/1.%E8%B7%A8%E9%A1%B5%E9%9D%A2%E9%80%9A%E4%BF%A1%E7%9A%84%E6%96%B9%E5%BC%8F.md)
     - 3.2 [各类“服务器推”技术原理和实例](https://github.com/skadieyes/SkillTree/blob/master/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%80%9A%E4%BF%A1/2.%E5%90%84%E7%B1%BB%E2%80%9C%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8E%A8%E2%80%9D%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E4%BE%8B.md)
