@@ -15,6 +15,7 @@
      - 2.7 [Set和WeakSet&Map和WeakMap](https://github.com/skadieyes/SkillTree/blob/master/%E7%BC%96%E7%A0%81/7.Set%E5%92%8CWeakSet%26Map%E5%92%8CWeakMap.md)
      - 2.8 [深度优先遍历和广度优先遍历](https://github.com/skadieyes/SkillTree/blob/master/%E7%BC%96%E7%A0%81/8.%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86%E5%92%8C%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86.md)
      - 2.9 [ES5&ES6的继承写法和区别](https://github.com/skadieyes/SkillTree/blob/master/%E7%BC%96%E7%A0%81/9.ES5%26ES6%E7%BB%A7%E6%89%BF%E7%9A%84%E5%8C%BA%E5%88%AB.md)
+     - 2.10 [new运算符](https://github.com/skadieyes/SkillTree/tree/master/%E7%BC%96%E7%A0%81)
 3. [服务端通信](https://github.com/skadieyes/SkillTree/tree/master/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%80%9A%E4%BF%A1)
     - 3.1 [跨页面通信的方式](https://github.com/skadieyes/SkillTree/blob/master/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%80%9A%E4%BF%A1/1.%E8%B7%A8%E9%A1%B5%E9%9D%A2%E9%80%9A%E4%BF%A1%E7%9A%84%E6%96%B9%E5%BC%8F.md)
     - 3.2 [各类“服务器推”技术原理和实例](https://github.com/skadieyes/SkillTree/blob/master/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%80%9A%E4%BF%A1/2.%E5%90%84%E7%B1%BB%E2%80%9C%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8E%A8%E2%80%9D%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E4%BE%8B.md)
