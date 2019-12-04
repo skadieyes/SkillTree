@@ -32,3 +32,5 @@
     - 6.1 [重绘和回流](https://github.com/skadieyes/SkillTree/blob/master/%E5%8E%9F%E7%90%86/1.%E9%87%8D%E7%BB%98%E5%92%8C%E5%9B%9E%E6%B5%81.md)
 7. [设计模式](https://github.com/skadieyes/SkillTree/tree/master/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F)
     - 7.1 [观察者模式和发布-订阅模式](https://github.com/skadieyes/SkillTree/blob/master/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1.%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E5%92%8C%E5%8F%91%E5%B8%83-%E8%AE%A2%E9%98%85%E6%A8%A1%E5%BC%8F.md)
+8. [工程](https://github.com/skadieyes/SkillTree/tree/master/工程)
+    - 8.1 [webpack定制前端环境](https://github.com/skadieyes/SkillTree/blob/master/%E5%B7%A5%E7%A8%8B/1.webpack.md)
