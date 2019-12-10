@@ -1,0 +1,83 @@
+# React的setState机制
+## 参考资料
+> Vuex、Flux、Redux、Redux-saga、Dva、MobX [Vuex、Flux、Redux、Redux-saga、Dva、MobX](https://zhuanlan.zhihu.com/p/53599723)
+
+## 解决思路
+> 把组件之间需要共享的状态抽取出来，遵循特定的约定，统一来管理，让状态的变化可以预测。
+
+## Store模式
+> 把状态存到一个外部变量里面，用action来控制
+
+> store里面有action,由action来控制state的改变，不直接去对state做改变，而是通过action来改变，因为都走action，我就可以知道改变是如何触发的，出现错误，也可以记录日志。
+
+> 所以需要约定一下，组件不允许直接修改属于store实例的state, 组件必须通过action来改变state，也就是组件必须执行action来分发（dispatch）通知store去改变。
+
+> 这样的好处是，我们能够记录store中发生的state改变，同时能做到记录变更，保存状态快照，历史会滚的调试工具。
+
+## Flux
+> Flux的最大特点就是，数据都是单向流动的。View告诉Dispatcher，让Dispatcher dispatch一个action，Dispatcher就像一个中转站，收到View发出的action，转发给Store。
+
+> Flux有一些缺点，比如一个应用可以拥有多个Store,多个Store之间可能有依赖关系；Store 封装了数据还有处理数据的逻辑。
+
+## Redux
+> Redux里面只有一个Store，整个应用的数据都在这个大Store里面。Store的State不能直接修改，每次只能返回一个新的State。
+
+### Reducer
+> Redux没有Dispatcher的概念，Store里面已经集成了dispatch方法。
+
+> Redux用一个叫做Reducer的纯函数来处理事件。Store收到Action以后，必须给出一个State的计算过程，这样State才会变化，从而改变View，这个State的计算过程就是Reducer。
+
+> Reducer是一个纯函数，对于相同的输入，永远都只会有相同的输出，不会影响外部变量，也不会被外部变量影响，不得改写参数。
+
+### Redux流程
+1. 用户通过View发出Action
+2. Store调用Reducer
+3. State一旦有变化，Store会调用监听函数
+4. listener通过store.getState得到当前状态，如果使用React，可以触发重新渲染View
+
+### 三大原则
+1. 单一数据源
+2. State是只读的
+3. 使用纯函数来执行修改
+
+### 异步
+> Reducer，纯函数，肯定不能承担异步操作，那样会被外部IO干扰。Action呢，就是一个纯对象，放不了操作。
+> 在View发送Action的时候，加一些异步操作。
+> Redux提供了一个applyMiddleware方法来应用中间件。
+
+### 处理异步
+#### Redux-thunk
+> 自主性较高
+#### Redux-promise
+> 做了一些简化，请求成功和失败不需要手动dispatch了
+
+## Vuex
+> 单一Sotre，Vuex通过store选项，把sate注入到了整个应用中，子组件能通过this.$state迅速访问到组件
+
+### Mutation
+> 更改Vuex的store中的状态的唯一方法是提交mutation。
+> mutation 有些类似 Redux 的 Reducer，但是 Vuex 不要求每次都搞一个新的 State，可以直接修改 State，这块儿又和 Flux 有些类似。
+
+### Action和异步
+> View 通过 store.dispatch('increment') 来触发某个 Action，Action 里面不管执行多少异步操作，完事之后都通过 store.commit('increment') 来触发 mutation，一个 Action 里面可以触发多个 mutation。所以 Vuex 的Action 类似于一个灵活好用的中间件。
+
+## Dva
+> Redux中，reducer, action之类的要写到好几个文件中，dva中这些东西都可以写到同一个文件中，统一为一个model的概念，还增加了一个 Subscriptions, 用于收集其他来源的 action
+
+## MobX
+> 任何源自应用状态的东西都应该自动地获得。
+
+> MobX 更接近于面向对象编程，它把 state 包装成可观察的对象，这个对象会驱动各种改变。
+
+> state只要一改变，所有用到它的地方就都跟着改变了。这样整个 View 可以被 state 来驱动。
+
+> 允许多个store, 对store直接进行修改。
+
+## 对比
+> Redux 数据流流动很自然，可以充分利用时间回溯的特征，增强业务的可预测性；MobX 没有那么自然的数据流动，也没有时间回溯的能力，但是 View 更新很精确，粒度控制很细。
+
+> Redux 通过引入一些中间件来处理副作用；MobX 没有中间件，副作用的处理比较自由，比如依靠 autorunAsync 之类的方法。
+
+> Redux的样板代码更多，有很多的规则需要去遵守，比如action，reducer要拆分出来去做他们分别应该做的事，放在该放到的地方；MObx则是没有太多的约束，直接使用和改变store。
+
+> 如果项目比较小的话，使用 MobX 会比较灵活，但是大型项目，像 MobX 这样没有约束，没有最佳实践的方式，会造成代码很难维护，各有利弊。
