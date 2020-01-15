@@ -33,6 +33,7 @@
     - 5.3 [js运行机制](https://github.com/skadieyes/SkillTree/blob/master/%E6%9D%82%E8%B0%88/js%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6.md)
     - 5.4 [Await&Async原理(迭代器，生成器)](https://github.com/skadieyes/SkillTree/blob/master/%E6%9D%82%E8%B0%88/4.Await%26Async%E5%8E%9F%E7%90%86.md)
     - 5.5 [浏览器的缓存机制](https://github.com/skadieyes/SkillTree/blob/master/%E6%9D%82%E8%B0%88/5.%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6.md)
+    - 5.6 [前端页面性能监控](https://github.com/skadieyes/SkillTree/blob/master/%E6%9D%82%E8%B0%88/6.%E5%89%8D%E7%AB%AF%E9%A1%B5%E9%9D%A2%E6%80%A7%E8%83%BD%E7%9B%91%E6%8E%A7.md)
 6. [原理](https://github.com/skadieyes/SkillTree/tree/master/%E5%8E%9F%E7%90%86)
     - 6.1 [重绘和回流](https://github.com/skadieyes/SkillTree/blob/master/%E5%8E%9F%E7%90%86/1.%E9%87%8D%E7%BB%98%E5%92%8C%E5%9B%9E%E6%B5%81.md)
 7. [设计模式](https://github.com/skadieyes/SkillTree/tree/master/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F)
