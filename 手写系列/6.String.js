@@ -3,17 +3,66 @@
  * https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace
  */
 
- // replace
+ // slice
+ // 提取字符串的一部分
+ // 语法 str.slice(beginIndex[, endIndex])
+ const str = 'The quick brown fox jumps over the lazy dog.';
+console.log(str.slice(4, 19));
+// expected output: "quick brown fox"
+
+// split
+// split() 方法使用指定的分隔符字符串将一个String对象分割成子字符串数组，以一个指定的分割字串来决定每个拆分的位置。 
+// str.split([separator[, limit]])
+var myString = "Hello World. How are you doing?";
+var splits = myString.split(" ", 3);
+
+console.log(splits); // ["Hello", "World.", "How"]
+
+// substring() 方法返回一个字符串在开始索引到结束索引之间的一个子集, 或从开始索引直到字符串的末尾的一个子集。
+// 提取字符串的一部分
+// str.substring(indexStart[, indexEnd])
+// 如果省略indexEnd，则一直提取字符串至末尾
+var anyString = "Mozilla";
+// 输出 "Moz"
+console.log(anyString.substring(0, 3));
+
+
+// toLocaleLowerCase()
+// 根据任何指定区域语言环境设置的大小写映射，返回调用字符串被转换为小写的格式。
+// str.toLocaleLowerCase(locale) 
+'ALPHABET'.toLocaleLowerCase()
+
+// toLowerCase()
+// str.toLowerCase()
+// 转换为小写
+console.log("ALPHABET".toLowerCase());
+// "alphabet"
+
+// 大写也一样
+// str.toLocaleUpperCase(locale) 
+// toUpperCase()
+
+// trim() 方法会从一个字符串的两端删除空白字符。在这个上下文中的空白字符是所有的空白字符 (space, tab, no-break space 等) 以及所有行终止符字符
+const greeting = '   Hello world!   ';
+
+console.log(greeting);
+// expected output: "   Hello world!   ";
+
+console.log(greeting.trim());
+// expected output: "Hello world!";
+
+// 
+
+// replace
  // 字符串替换
 const p = 'The quick brown fox jumps over the lazy dog. If the dog reacted, was it really lazy?';
-
 const regex = /dog/gi;
-
 console.log(p.replace(regex, 'ferret'));
 // expected output: "The quick brown fox jumps over the lazy ferret. If the ferret reacted, was it really lazy?"
-
 console.log(p.replace('dog', 'monkey'));
 
+// split
+// 使用指定的分隔符字符串将一个String对象分割成子字符串数组，以一个指定的分割字串来决定每个拆分的位置。 
 // concat
 // 字符串拼接合并
 var hello = "Hello, ";
