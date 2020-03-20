@@ -113,4 +113,3 @@ var re2 = /[.]/g;
 console.log(str.search(re)); // returns 4, which is the index of the first capital letter "J"
 console.log(str.search(re2)); // returns -1 cannot find '.' dot punctuation
 
-// 
