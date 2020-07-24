@@ -40,3 +40,4 @@ var dasherize = compose(join('-'), map(toLower), split(' '), replace(/\s{2,}/ig,
 dasherize('The world is a vampire');
 
 // 'the-world-is-a-vampire'
+//
