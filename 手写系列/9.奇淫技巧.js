@@ -16,4 +16,18 @@ function getFileExtension1(filename) {
 function getFileExtension3(filename) {
   return filename.slice((filename.lastIndexOf(".") - 1 >>> 0) + 2);
 }
-// 
+// 使用tap来调试
+
+function tap(x) {
+    console.log(x);
+    return x;
+}
+
+arr.filter(c=> tap(c>6))
+
+// 反转字符串
+
+const reverseString = string => [...string].reverse().join('')
+reverseString('Hello Word!') // "!dlroW olleH"
+
+
